@@ -1,16 +1,3 @@
-/*
-Features:
-Parameterized Bit-Width (MEM_WIDTH) → Supports configurable data width for flexibility.
-Parameterized Memory Depth (MEM_DEPTH) → Allows defining different memory sizes as needed.
-Parameterized Address Size (ADDR_SIZE) → Automatically computed using $clog2(MEM_DEPTH), ensuring efficient address representation.
-Asynchronous Active-Low Reset (rst_n) → Resets dout immediately when rst_n is low.
-Synchronous Read and Write Operations:
-Write (wr_en = 1) → Stores din at memory location addr_wr.
-Read (rd_en = 1) → Outputs data from memory location addr_rd to dout.
-Clock (clk) Controlled Operations → Read and write happen on the positive edge of clk.
-Efficient Memory Implementation (mem array) → Uses reg array for scalable storage.
-Scalable Design → Works with any word size and memory depth by adjusting parameters.
-*/
 module RAM #(
     parameter MEM_WIDTH = 8,                   // Data width
     parameter MEM_DEPTH = 256,                 // Number of memory locations
