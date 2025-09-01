@@ -17,10 +17,4 @@ initial begin
     dyn_arr = new[8] (arr1); //unpacked size will be dynamic.
     $display ("dyn_arr : %p" , dyn_arr);
 end
-
-
-
-
-
-
 endmodule
